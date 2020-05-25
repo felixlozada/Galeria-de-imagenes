@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<title>Document</title>
+	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="fontawesome/all.min.css">
+	<link href="https://fonts.googleapis.com/css?family=Noto Sans:100,300,500,700&display=swap" rel="stylesheet">
+</head>
+<body>
+	<section id="portafolio">
+		<div class="contenedor1" data-aos="flip-left" data-aos-duration="1500">
+			<h1 class="titulo">Galeria de imagenes con filtro y lightbox</h1>
+			<h3 class="subtitulo">Desarrollado por Felix Lozada con HTML, CSS y Javascript puro</h3>
+			<div class="categorias">
+				<ul>
+					<li class="filter active" data-nombre="todos">Todos</li>
+					<li class="filter" data-nombre="ilustracciones">Ilustracciones</li>
+					<li class="filter" data-nombre="logos">Logos</li>
+					<li class="filter" data-nombre="web">Diseño Web</li>
+				</ul>
+			</div>
+			<div class="contenedor-trabajos">
+				<div class="trabajo ilustraccion" data-nombre="ilustracciones">
+					<img class="img-trabajo" data-nombre="ilustraccion" src="img/img-1.jpg" alt="">
+					<div class="textos-trabajo">
+						<h4>Ilustraccion</h4>
+					</div>
+				</div>
+				<div class="trabajo ilustraccion" data-nombre="ilustracciones">
+					<img class="img-trabajo" src="img/img-2.jpg" alt="">
+					<div class="textos-trabajo">
+						<h4>Ilustraccion</h4>
+					</div>
+				</div>
+				<div class="trabajo logo" data-nombre="logos">
+					<img class="img-trabajo" src="img/img-3.jpeg" alt="">
+					<div class="textos-trabajo">
+						<h4>Logo</h4>
+					</div>
+				</div>
+				<div class="trabajo logo" data-nombre="logos">
+					<img class="img-trabajo" src="img/img-4.jpeg" alt="">
+					<div class="textos-trabajo">
+						<h4>Logo</h4>
+					</div>
+				</div>
+				<div class="trabajo web" data-nombre="web">
+					<img class="img-trabajo" src="img/img-5.jpeg" alt="">
+					<div class="textos-trabajo">
+						<h4>Diseño Web</h4>
+					</div>
+				</div>
+				<div class="trabajo web" data-nombre="web">
+					<img class="img-trabajo" src="img/img-6.jpeg" alt="">
+					<div class="textos-trabajo">
+						<h4>Diseño Web</h4>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="modal">
+			<span class="close fas fa-times"></span>
+			
+			<img class="modal-img" src="">
+			<p class="modal-text"></p>
+		</div>	
+	</section>	
+	<script src="main.js"></script>
+</body>
+</html>

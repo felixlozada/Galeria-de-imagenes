@@ -1,0 +1,186 @@
+:root{
+	--verde: #1de9b6;
+	--rojo: #ff1744;
+	--negro: #151525;
+	--gris: #78909c;
+	--fondo: rgba(29, 233, 182, .1);
+}
+
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Noto Sans', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6{
+	text-align: center;
+}
+
+h1{
+	font-weight: 500;
+	font-size: 30px;
+	margin-bottom: 10px;
+}
+
+h3{
+	font-weight: 300;
+	font-size: 20px;
+	margin-bottom: 25px;
+}
+
+a{
+	text-decoration: none;
+}
+
+.contenedor, .contenedor1{
+	width: 100%;
+	max-width: 1000px;
+	margin: auto;
+	overflow: hidden;
+}
+
+.contenedor1{
+	padding: 60px 0;
+}
+
+/* Portafolio */
+
+#portafolio{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	flex-flow: column;
+	min-height: 800px;
+}
+
+.categorias{
+	width: 100%;
+	margin: auto;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.categorias li{
+	display: inline-block;
+	text-align: center;
+	margin-left: 10px;
+	margin-bottom: 35px;
+	padding: 5px 15px;
+	border-radius: 5px;
+	border: 1px solid var(--verde);
+	color: var(--verde);
+	cursor: pointer;
+	transition: .2s;
+}
+
+.filter:hover{
+	background: var(--verde);
+	color: #fff;
+}
+
+.categorias .active{
+	background: var(--verde);
+	color: #fff;
+}
+
+.contenedor-trabajos{
+	display:flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	align-items: center;
+}
+
+.trabajo{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	flex-flow: column;
+	width: 30%;
+	height: 300px;
+	margin: 0 10px 20px 0;
+	overflow: hidden;
+	border-radius: 7px;
+	cursor: pointer;
+	transition: .5s;
+}
+
+.img-trabajo{
+	height: 90%;
+	width: 100%;
+	object-fit: cover;
+	transition: .5s;
+}
+
+.trabajo:hover .img-trabajo{
+	transform: scale(1.5);
+	filter: brightness(.5);
+	z-index: 0;
+}
+
+.textos-trabajo{
+	background: var(--rojo);
+	color: #fff;
+	height: 10%;
+	width: 100%;
+	font-weight: 500;
+	font-size: 18px;
+	z-index: 1;
+}
+
+.textos-trabajo h4{
+	line-height: 30px;
+	font-weight: 500;
+}
+
+.modal{
+	display: none;
+	opacity: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0,0,0, .9);
+	z-index: -1;
+	position: fixed;
+	top: 0;
+	left: 0;
+	justify-content: center;
+	align-items: center;
+	flex-flow: column;
+	transition: .5s;
+}
+
+.close{
+	color: #fff;
+	font-size: 30px;
+	position: absolute;
+	top: 20px;
+	right: 20px;
+}
+
+.modal-img{
+	max-height: 80vh;
+	max-width: 80vw;
+	margin-top: 50px;
+	transition: .5s;
+}
+
+@media screen and (max-width: 800px){
+	/* Portafolio */
+
+	#portafolio .trabajo{
+		width: 40%;
+	}
+}
+
+@media screen and (max-width: 600px){
+	/* Portafolio */
+	
+	#portafolio .categorias li{
+		display: block;
+	}
+
+	#portafolio .trabajo{
+		width: 85%;
+	}
+}
